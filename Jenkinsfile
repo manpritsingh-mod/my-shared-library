@@ -2,9 +2,9 @@
 pipeline {
     agent any
     stages {
-        stage('Greet') {
+        stage('Sample') {
             steps {
-                Hello 'Alice'
+                Hello 'Manprit'
             }
         }
     }
