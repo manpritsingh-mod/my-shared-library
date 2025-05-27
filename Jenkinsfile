@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Sample') {
             steps {
-                sayHello 'Manprit'
+                Hello 'Manprit'
             }
         }
     }
