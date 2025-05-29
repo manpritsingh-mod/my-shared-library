@@ -1,3 +1,4 @@
+@Library('my-shared-library')
 def call(String repoURL = 'https://github.com/manpritsingh-s/ExcelReadWrite.git'){
   pipeline{
     agent any
@@ -13,7 +14,7 @@ def call(String repoURL = 'https://github.com/manpritsingh-s/ExcelReadWrite.git'
         }
         stage('Build Java'){
             steps{
-                bat 'mvn clean install'
+                mvnBuildTest.Build()
             }
         }
         stage('Log Build Success to Excel') {
