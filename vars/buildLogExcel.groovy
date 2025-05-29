@@ -14,7 +14,9 @@ def call(String repoURL = 'https://github.com/manpritsingh-s/ExcelReadWrite.git'
         }
         stage('Build Java'){
             steps{
-                mvnBuildTest.Build()
+              script{
+                 mvnBuildTest.Build()
+              }
             }
         }
         stage('Log Build Success to Excel') {
